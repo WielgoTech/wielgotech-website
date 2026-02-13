@@ -4,84 +4,97 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wielgo Tech | Digital Implant & Full-Arch Lab</title>
+
     <style>
- <style>
-  body { 
-    margin:0; 
-    font-family: Arial, Helvetica, sans-serif; 
-    background:#e9e3da; 
-    color:#2c2c2c; 
-  }
-  .wrap { 
-    max-width: 980px; 
-    margin: 0 auto; 
-    padding: 60px 24px; 
-  }
-  .badge { 
-    display:inline-block; 
-    background:#d4cfc6; 
-    padding:8px 14px; 
-    border-radius:999px; 
-    font-size:14px; 
-    color:#4a4a4a; 
-  }
-  h1 { 
-    font-size: 42px; 
-    margin: 20px 0 12px; 
-    letter-spacing: 1px;
-  }
-  p { 
-    font-size: 18px; 
-    line-height: 1.6; 
-    max-width: 760px; 
-  }
-  .grid { 
-    display:grid; 
-    grid-template-columns: 1fr; 
-    gap:18px; 
-    margin-top: 32px; 
-  }
-  .card { 
-    background:#f4efe8; 
-    padding:22px; 
-    border-radius:14px; 
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  }
-  .card h3 { 
-    margin:0 0 10px; 
-  }
-  .cta { 
-    margin-top: 30px; 
-    display:flex; 
-    gap:14px; 
-    flex-wrap:wrap; 
-  }
-  a.btn { 
-    text-decoration:none; 
-    padding:12px 18px; 
-    border-radius:12px; 
-    border:1px solid #7a6f60; 
-    color:#7a6f60; 
-  }
-  a.btn.primary { 
-    background:#7a6f60; 
-    color:white; 
-    border-color:#7a6f60; 
-  }
-  footer { 
-    margin-top: 50px; 
-    font-size:14px; 
-    color:#6b6257; 
-  }
-</style>    
- 
-</style>
+      body { 
+        margin:0; 
+        font-family: Arial, Helvetica, sans-serif; 
+        background:#e9e3da; 
+        color:#2c2c2c; 
+      }
+
+      .wrap { 
+        max-width: 980px; 
+        margin: 0 auto; 
+        padding: 60px 24px; 
+      }
+
+      .badge { 
+        display:inline-block; 
+        background:#d4cfc6; 
+        padding:8px 14px; 
+        border-radius:999px; 
+        font-size:14px; 
+        color:#4a4a4a; 
+      }
+
+      h1 { 
+        font-size: 42px; 
+        margin: 20px 0 12px; 
+        letter-spacing: 1px;
+      }
+
+      p { 
+        font-size: 18px; 
+        line-height: 1.6; 
+        max-width: 760px; 
+      }
+
+      .grid { 
+        display:grid; 
+        grid-template-columns: 1fr; 
+        gap:18px; 
+        margin-top: 32px; 
+      }
+
+      .card { 
+        background:#f4efe8; 
+        padding:22px; 
+        border-radius:14px; 
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      }
+
+      .card h3 { 
+        margin:0 0 10px; 
+      }
+
+      .cta { 
+        margin-top: 30px; 
+        display:flex; 
+        gap:14px; 
+        flex-wrap:wrap; 
+      }
+
+      a.btn { 
+        text-decoration:none; 
+        padding:12px 18px; 
+        border-radius:12px; 
+        border:1px solid #7a6f60; 
+        color:#7a6f60; 
+      }
+
+      a.btn.primary { 
+        background:#7a6f60; 
+        color:white; 
+        border-color:#7a6f60; 
+      }
+
+      footer { 
+        margin-top: 50px; 
+        font-size:14px; 
+        color:#6b6257; 
+      }
     </style>
   </head>
+
   <body>
     <div class="wrap">
-      <span class="badge">Parsippany, New Jersey • Nationwide Digital Case Intake</span>
+      <span class="badge">
+        Parsippany, New Jersey • Nationwide Digital Case Intake
+      </span>
+
       <h1>Wielgo Tech</h1>
+
       <p>
         A fully digital dental laboratory focused on implant restorations and full-arch reconstructions.
         Built for predictable delivery, smooth chairtime, and clear communication.
@@ -92,10 +105,12 @@
           <h3>Primary Focus</h3>
           <p>Digital implant restorations + full-mouth / full-arch reconstructions.</p>
         </div>
+
         <div class="card">
           <h3>Supporting Services</h3>
           <p>Crown & bridge designed for accuracy, contacts, and occlusion you can trust.</p>
         </div>
+
         <div class="card">
           <h3>All In-House</h3>
           <p>Design + production handled in-house (no outsourcing) for consistency and control.</p>
@@ -103,14 +118,22 @@
       </div>
 
       <div class="cta">
-        <a class="btn primary" href="mailto:cases@wielgotech.com?subject=New%20Digital%20Case%20-%20Wielgo%20Tech">Send a Case</a>
-        <a class="btn" href="mailto:info@wielgotech.com?subject=Inquiry%20-%20Wielgo%20Tech">Contact</a>
+        <a class="btn primary" href="mailto:cases@wielgotech.com?subject=New%20Digital%20Case%20-%20Wielgo%20Tech">
+          Send a Case
+        </a>
+
+        <a class="btn" href="mailto:info@wielgotech.com?subject=Inquiry%20-%20Wielgo%20Tech">
+          Contact
+        </a>
       </div>
 
       <footer>
-        © <span id="y"></span> Wielgo Tech — Digital Implant & Full-Arch Laboratory
+        © <span id="year"></span> Wielgo Tech — Digital Implant & Full-Arch Laboratory
       </footer>
     </div>
-    <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
