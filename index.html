@@ -26,20 +26,14 @@ body {
   color:var(--text);
 }
 
-.section-block {
-  padding:110px 0;
-}
+/* full-width section blocks with alternating backgrounds */
+.section-block { padding:110px 0; }
+.section-block.alt { background:var(--alt); }
 
-.alt {
-  background:var(--alt);
-}
+/* keep content centered */
+.container { max-width:1100px; margin:0 auto; padding:0 28px; }
 
-.container {
-  max-width:1100px;
-  margin:0 auto;
-  padding:0 28px;
-}
-
+/* header */
 .header {
   display:flex;
   justify-content:space-between;
@@ -70,6 +64,7 @@ body {
   font-size:14px;
 }
 
+/* phone pill */
 .phone-pill {
   background:var(--phonebg);
   padding:8px 14px;
@@ -81,15 +76,20 @@ body {
   gap:8px;
   border:1px solid rgba(0,0,0,0.12);
 }
-
 .phone-pill a {
   color:#ffffff;
   text-decoration:none;
   font-weight:900;
 }
+.phone-divider { color:rgba(255,255,255,0.55); font-weight:900; }
 
-.phone-divider {
-  color:rgba(255,255,255,0.55);
+/* hero */
+.hero-label{
+  font-size:13px;
+  letter-spacing:2px;
+  font-weight:900;
+  color:var(--accent);
+  margin-bottom:14px;
 }
 
 .hero h1 {
@@ -125,20 +125,13 @@ body {
   font-size:15px;
 }
 
-.primary {
-  background:var(--accent);
-  color:white;
-}
+.primary { background:var(--accent); color:white; }
+.secondary { border:1px solid var(--accent); color:var(--accent); background:transparent; }
 
-.secondary {
-  border:1px solid var(--accent);
-  color:var(--accent);
-  background:transparent;
-}
-
+/* sections */
 .section h2 {
   font-size:30px;
-  margin-bottom:30px;
+  margin:0 0 30px;
   font-weight:900;
 }
 
@@ -155,28 +148,46 @@ body {
   border:1px solid var(--border);
 }
 
-.card h3 {
-  margin:0 0 10px;
-  font-weight:800;
+.card h3 { margin:0 0 10px; font-weight:800; }
+.card p { margin:0; line-height:1.7; color:#3d4a52; }
+
+/* platforms */
+.platforms-wrap{
+  background: rgba(255,255,255,0.65);
+  border:1px solid rgba(0,0,0,0.06);
+  padding:26px;
+  border-radius:10px;
 }
 
-.card p {
-  margin:0;
-  line-height:1.7;
-  color:#3d4a52;
+.pill{
+  display:inline-block;
+  padding:7px 11px;
+  border-radius:999px;
+  background:rgba(122,111,96,0.10);
+  border:1px solid rgba(122,111,96,0.25);
+  margin:8px 8px 0 0;
+  font-size:12px;
+  font-weight:900;
+  color:#4b433b;
 }
 
+.note { margin-top:14px; color:var(--muted); line-height:1.7; }
+.smalllink{ color:var(--accent); text-decoration:none; font-weight:900; }
+
+/* footer */
 .footer {
   padding:60px 0;
   font-size:14px;
   color:#6c7a82;
   text-align:center;
+  border-top:1px solid var(--border);
 }
 </style>
 </head>
 
 <body>
 
+<!-- Header (stays on base background) -->
 <div class="container header">
   <div class="brand">WIELGO TECH</div>
   <div class="nav">
@@ -195,14 +206,11 @@ body {
   </div>
 </div>
 
+<!-- HERO (base background) -->
 <div class="section-block hero">
   <div class="container">
-    <div style="font-size:13px; letter-spacing:2px; font-weight:900; color:var(--accent); margin-bottom:14px;">
-      IMPLANT-FOCUSED DIGITAL LABORATORY
-    </div>
-
+    <div class="hero-label">IMPLANT-FOCUSED DIGITAL LABORATORY</div>
     <h1>Precision Implant Restorations Built to Minimize Chairtime.</h1>
-
     <p>
       A fully digital implant laboratory delivering engineered restorations through controlled in-house design and milling.
       No outsourcing. No variability.
@@ -215,6 +223,7 @@ body {
   </div>
 </div>
 
+<!-- Focus (white cards on base bg) -->
 <div class="section-block" id="focus">
   <div class="container section">
     <h2>Core Focus</h2>
@@ -235,22 +244,151 @@ body {
   </div>
 </div>
 
+<!-- Workflow (ALT background) -->
 <div class="section-block alt" id="workflow">
   <div class="container section">
     <h2>Digital Implant Workflow</h2>
     <div class="grid">
-      <div class="card"><h3>1. Prescription & Case Review</h3><p>Structured review of RX and STL files before design begins.</p></div>
-      <div class="card"><h3>2. Restorative-Driven Digital Design</h3><p>Designed within exocad with direct communication when needed.</p></div>
-      <div class="card"><h3>3. In-House Milling & Fabrication</h3><p>Custom abutments and restorations milled internally.</p></div>
-      <div class="card"><h3>4. Finishing & Quality Control</h3><p>Final fit and occlusal verification prior to release.</p></div>
+      <div class="card">
+        <h3>1. Prescription & Case Review</h3>
+        <p>Structured review of RX and STL files including implant position, restorative space, screw channel trajectory, and aesthetic limitations before design begins.</p>
+      </div>
+      <div class="card">
+        <h3>2. Restorative-Driven Digital Design</h3>
+        <p>Designed within exocad to prescription. When screw-access or aesthetic conflicts arise, direct communication happens before fabrication to confirm the proper restorative path.</p>
+      </div>
+      <div class="card">
+        <h3>3. In-House Milling & Fabrication</h3>
+        <p>Custom abutments, implant restorations, and frameworks milled in-house across dedicated production units.</p>
+      </div>
+      <div class="card">
+        <h3>4. Finishing & Quality Control</h3>
+        <p>Final fit verification and occlusal evaluation prior to release—engineered to minimize chairside adjustment.</p>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="section-block">
-  <div class="container footer">
-    © <span id="year"></span> Wielgo Tech
+<!-- Equipment (base background) -->
+<div class="section-block" id="equipment">
+  <div class="container section">
+    <h2>Equipment & Production Environment</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Digital Design Systems</h3>
+        <p>Fully integrated exocad and 3Shape environment with implant library compatibility across major systems.</p>
+      </div>
+      <div class="card">
+        <h3>In-House Milling Units</h3>
+        <p>Four dedicated milling machines supporting zirconia, titanium, and custom abutment production.</p>
+      </div>
+      <div class="card">
+        <h3>Custom Abutment Manufacturing</h3>
+        <p>Design and milling of custom abutments completed internally to maintain design-to-production consistency.</p>
+      </div>
+      <div class="card">
+        <h3>Controlled Fabrication Workflow</h3>
+        <p>All production stages managed in-house to eliminate outsourcing variability and maintain quality control.</p>
+      </div>
+    </div>
   </div>
+</div>
+
+<!-- Platforms (ALT background) -->
+<div class="section-block alt" id="platforms">
+  <div class="container section">
+    <h2>Implant System Compatibility</h2>
+
+    <div class="platforms-wrap">
+      <div style="font-weight:900; font-size:16px;">
+        Compatible with most major implant platforms.
+      </div>
+
+      <div class="note" style="margin-top:10px;">
+        If you don’t see your system listed below, <strong>we likely support it</strong>. Send the case anyway or
+        <a class="smalllink" href="#contact">contact us</a> and we’ll confirm quickly.
+      </div>
+
+      <div style="margin-top:14px; font-weight:900; color:#2a2a2a;">
+        Common platforms we design for:
+      </div>
+
+      <div>
+        <span class="pill">Straumann</span>
+        <span class="pill">Nobel Biocare</span>
+        <span class="pill">Zimmer</span>
+        <span class="pill">Hiossen</span>
+        <span class="pill">Neoss</span>
+        <span class="pill">Neodent</span>
+        <span class="pill">BioHorizons</span>
+        <span class="pill">Astra Tech</span>
+        <span class="pill">Implant Direct</span>
+        <span class="pill">MIS</span>
+        <span class="pill">Dentsply</span>
+      </div>
+
+      <div class="note">
+        Broad library compatibility across systems and components for digital workflows.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Why (base background) -->
+<div class="section-block" id="why">
+  <div class="container section">
+    <h2>Why Wielgo Tech</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Restorative-Driven Decisions</h3>
+        <p>Implant design choices made with final outcome and long-term restorative success in mind.</p>
+      </div>
+      <div class="card">
+        <h3>Direct Technician Access</h3>
+        <p>Communicate directly with the technician handling your case—no layers, no miscommunication.</p>
+      </div>
+      <div class="card">
+        <h3>Predictable Outcomes</h3>
+        <p>Controlled systems built around reducing remakes and improving chairtime efficiency.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact (ALT background) -->
+<div class="section-block alt" id="contact">
+  <div class="container section">
+    <h2>Contact</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Email</h3>
+        <p>
+          <a class="smalllink" href="mailto:cases@wielgotech.com">cases@wielgotech.com</a><br/>
+          <a class="smalllink" href="mailto:info@wielgotech.com">info@wielgotech.com</a>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Phone</h3>
+        <p>
+          <a class="smalllink" href="tel:+13474070592">(347) 407-0592</a>
+          <span style="color:#6c7a82;"> / </span>
+          <a class="smalllink" href="sms:+13474070592">Text</a>
+          <br/>Direct technician communication available.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Location</h3>
+        <p>Parsippany, New Jersey<br/>Nationwide Digital Intake</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="container footer">
+  © <span id="year"></span> Wielgo Tech
 </div>
 
 <script>
