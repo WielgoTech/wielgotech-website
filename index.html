@@ -19,7 +19,7 @@ html { scroll-behavior: smooth; }
 
 body {
   margin:0;
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Helvetica Neue", sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   background:var(--bg);
   color:var(--text);
 }
@@ -35,22 +35,35 @@ body {
   justify-content:space-between;
   align-items:center;
   margin-bottom:80px;
-  gap:18px;
   flex-wrap:wrap;
+  gap:15px;
 }
 
 .brand {
   font-size:20px;
   letter-spacing:3px;
-  font-weight:750;
+  font-weight:800;
   color:#3e362f;
 }
 
+.nav {
+  display:flex;
+  align-items:center;
+  gap:22px;
+  flex-wrap:wrap;
+}
+
 .nav a {
-  margin-left:22px;
   text-decoration:none;
   color:var(--accent);
-  font-weight:600;
+  font-weight:700;
+  font-size:14px;
+}
+
+.phone {
+  font-weight:800;
+  font-size:14px;
+  color:#2a2a2a;
 }
 
 .hero h1 {
@@ -58,7 +71,7 @@ body {
   max-width:900px;
   line-height:1.05;
   margin:0 0 18px;
-  font-weight:800;
+  font-weight:900;
   letter-spacing:-0.5px;
 }
 
@@ -81,9 +94,9 @@ body {
   padding:16px 26px;
   border-radius:8px;
   text-decoration:none;
-  font-weight:700;
+  font-weight:800;
   display:inline-block;
-  font-size:16px;
+  font-size:15px;
 }
 
 .primary {
@@ -99,26 +112,22 @@ body {
 
 .truststrip{
   margin-top:34px;
-  background:rgba(255,255,255,0.55);
+  background:rgba(255,255,255,0.6);
   border:1px solid rgba(0,0,0,0.06);
-  padding:16px 18px;
+  padding:18px;
   border-radius:10px;
-  color:#3b3b3b;
-  line-height:1.6;
-  max-width:900px;
-  font-size:15px;
+  font-size:14px;
 }
-.truststrip b{ color:#2a2a2a; }
 
-.authority {
-  margin-top:85px;
-  padding:34px;
-  background:var(--card);
-  border-left:4px solid var(--accent);
-  font-size:16px;
-  line-height:1.75;
-  border-radius:10px;
-  border:1px solid rgba(0,0,0,0.06);
+.pill{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(122,111,96,0.1);
+  border:1px solid rgba(122,111,96,0.25);
+  margin:6px 6px 0 0;
+  font-size:12px;
+  font-weight:700;
 }
 
 .section {
@@ -126,15 +135,14 @@ body {
 }
 
 .section h2 {
-  font-size:28px;
-  margin:0 0 30px;
-  font-weight:850;
-  letter-spacing:-0.3px;
+  font-size:30px;
+  margin-bottom:30px;
+  font-weight:900;
 }
 
 .grid {
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:26px;
 }
 
@@ -142,49 +150,26 @@ body {
   background:var(--card);
   padding:30px;
   border-radius:10px;
-  border:1px solid rgba(0,0,0,0.06);
+  border:1px solid var(--border);
 }
 
 .card h3 {
   margin:0 0 10px;
-  font-weight:750;
+  font-weight:800;
 }
 
-.card p{
+.card p {
   margin:0;
   line-height:1.7;
   color:#3d4a52;
 }
 
-.divider{
-  margin-top:120px;
-  border-top:1px solid var(--border);
-}
-
 .footer {
-  margin-top:40px;
+  margin-top:140px;
   font-size:14px;
   color:#6c7a82;
-  padding-top:10px;
-  display:flex;
-  justify-content:space-between;
-  flex-wrap:wrap;
-  gap:10px;
-}
-.smalllink{
-  color:var(--accent);
-  text-decoration:none;
-  font-weight:700;
-}
-.pill{
-  display:inline-block;
-  padding:8px 12px;
-  border-radius:999px;
-  background:rgba(122,111,96,0.10);
-  border:1px solid rgba(122,111,96,0.25);
-  color:#4b433b;
-  font-size:13px;
-  font-weight:700;
+  border-top:1px solid var(--border);
+  padding-top:30px;
 }
 </style>
 </head>
@@ -193,114 +178,125 @@ body {
 
 <div class="container">
 
-  <div class="header">
-    <div class="brand">WIELGO TECH</div>
-    <div class="nav">
-      <a href="#focus">Focus</a>
-      <a href="#why">Why</a>
-      <a href="./send-case.html">Send a Case</a>
-      <a href="#contact">Contact</a>
+<div class="header">
+  <div class="brand">WIELGO TECH</div>
+  <div class="nav">
+    <span class="phone">(973) 555-1234</span>
+    <a href="#focus">Focus</a>
+    <a href="#workflow">Workflow</a>
+    <a href="#why">Why</a>
+    <a href="./send-case.html">Send a Case</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<div class="hero">
+  <h1>Precision Implant Restorations Built to Minimize Chairtime.</h1>
+  <p>
+    A fully digital implant laboratory delivering engineered restorations through controlled in-house design and milling. No outsourcing. No variability.
+  </p>
+
+  <div class="cta">
+    <a class="button primary" href="./send-case.html">Submit a Case</a>
+    <a class="button secondary" href="#contact">Contact Wielgo Tech</a>
+  </div>
+
+  <div class="truststrip">
+    Digital-first workflow • Direct technician communication • Fully in-house milling
+    <div>
+      <span class="pill">exocad</span>
+      <span class="pill">3Shape</span>
+      <span class="pill">Medit</span>
+      <span class="pill">iTero</span>
+      <span class="pill">Dexis</span>
     </div>
   </div>
+</div>
 
-  <div class="hero">
-    <h1>Precision Implant Restorations Built to Minimize Chairtime.</h1>
-    <p>
-      A fully digital implant laboratory delivering engineered restorations through controlled in-house design and milling.
-      No outsourcing. No variability.
-    </p>
-
-    <div class="cta">
-      <a class="button primary" href="./send-case.html">Submit a Case</a>
-      <a class="button secondary" href="#contact">Contact Wielgo Tech</a>
+<div class="section" id="focus">
+  <h2>Core Focus</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Digital Implant Restorations</h3>
+      <p>Single-unit and multi-unit implant solutions designed for accurate seating and reduced occlusal adjustment.</p>
     </div>
-
-    <div class="truststrip">
-      <b>Digital-first workflow</b> • Direct technician access • In-house milling • Built for predictable seating and reduced adjustment.
-      <div style="margin-top:10px;">
-        <span class="pill">exocad</span>
-        <span class="pill">3Shape</span>
-        <span class="pill">Medit</span>
-        <span class="pill">iTero</span>
-        <span class="pill">Dexis</span>
-      </div>
+    <div class="card">
+      <h3>Full-Arch Reconstructions</h3>
+      <p>Comprehensive digital planning for full-mouth implant cases with restorative-driven workflow.</p>
+    </div>
+    <div class="card">
+      <h3>Crown & Bridge</h3>
+      <p>High-strength zirconia and aesthetic restorations fabricated with precision and consistency.</p>
     </div>
   </div>
+</div>
 
-  <div class="authority">
-    <strong>Fully Digital Design Environment.</strong> Exocad and 3Shape proficiency with compatibility across major intraoral scanners.
-    <br><br>
-    <strong>Complete Production Control.</strong> Four in-house milling units ensuring consistent material handling and predictable delivery timelines.
-  </div>
-
-  <div class="section" id="focus">
-    <h2>Core Focus</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Digital Implant Restorations</h3>
-        <p>Single-unit and multi-unit implant solutions designed for accurate seating and reduced occlusal adjustment.</p>
-      </div>
-      <div class="card">
-        <h3>Full-Arch Reconstructions</h3>
-        <p>Comprehensive digital planning for full-mouth implant cases with a restorative-driven workflow.</p>
-      </div>
-      <div class="card">
-        <h3>Crown & Bridge</h3>
-        <p>High-strength zirconia and aesthetic restorations fabricated with precision and consistency.</p>
-      </div>
+<div class="section" id="workflow">
+  <h2>Digital Implant Workflow</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>1. Prescription & Case Review</h3>
+      <p>Structured review of RX and STL files including implant position, restorative space, screw channel trajectory, and aesthetic limitations before design begins.</p>
+    </div>
+    <div class="card">
+      <h3>2. Restorative-Driven Digital Design</h3>
+      <p>Designed within exocad to prescription. When screw access or aesthetic conflicts arise, direct communication is initiated prior to fabrication to confirm the proper restorative path.</p>
+    </div>
+    <div class="card">
+      <h3>3. In-House Milling & Fabrication</h3>
+      <p>Custom abutments, implant restorations, and frameworks milled in-house across dedicated production units. No outsourcing between design and production.</p>
+    </div>
+    <div class="card">
+      <h3>4. Finishing & Quality Control</h3>
+      <p>Final fit verification, contact refinement, and occlusal evaluation prior to release—engineered to minimize chairside adjustment.</p>
     </div>
   </div>
+</div>
 
-  <div class="section" id="why">
-    <h2>Why Wielgo Tech</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Restorative-Driven Decisions</h3>
-        <p>Design choices made with final outcome, occlusion, and chairtime efficiency in mind.</p>
-      </div>
-      <div class="card">
-        <h3>Direct Technician Access</h3>
-        <p>Talk to the person designing your case—no layers, no handoffs, no confusion.</p>
-      </div>
-      <div class="card">
-        <h3>Predictable Outcomes</h3>
-        <p>Systems built around minimizing remakes and reducing chairside adjustment.</p>
-      </div>
+<div class="section" id="why">
+  <h2>Why Wielgo Tech</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Restorative-Driven Decisions</h3>
+      <p>Implant design choices made with final outcome and long-term restorative success in mind.</p>
+    </div>
+    <div class="card">
+      <h3>Direct Technician Access</h3>
+      <p>Communicate directly with the technician handling your case—no layers, no miscommunication.</p>
+    </div>
+    <div class="card">
+      <h3>Predictable Outcomes</h3>
+      <p>Controlled systems built around reducing remakes and improving chairtime efficiency.</p>
     </div>
   </div>
+</div>
 
-  <div class="section" id="contact">
-    <h2>Contact</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Email</h3>
-        <p>
-          Cases: <a class="smalllink" href="mailto:cases@wielgotech.com">cases@wielgotech.com</a><br/>
-          General: <a class="smalllink" href="mailto:info@wielgotech.com">info@wielgotech.com</a>
-        </p>
-      </div>
-      <div class="card">
-        <h3>Location</h3>
-        <p>Parsippany, New Jersey<br/>Nationwide digital case intake</p>
-      </div>
-      <div class="card">
-        <h3>Start a Case</h3>
-        <p><a class="smalllink" href="./send-case.html">Submit a case here →</a></p>
-      </div>
+<div class="section" id="contact">
+  <h2>Contact</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Email</h3>
+      <p>cases@wielgotech.com<br/>info@wielgotech.com</p>
+    </div>
+    <div class="card">
+      <h3>Phone</h3>
+      <p>(973) 555-1234<br/>Direct technician communication available.</p>
+    </div>
+    <div class="card">
+      <h3>Location</h3>
+      <p>Parsippany, New Jersey<br/>Nationwide Digital Intake</p>
     </div>
   </div>
+</div>
 
-  <div class="divider"></div>
-
-  <div class="footer">
-    <div>© <span id="year"></span> Wielgo Tech</div>
-    <div><a class="smalllink" href="./send-case.html">Send a Case</a></div>
-  </div>
+<div class="footer">
+  © <span id="year"></span> Wielgo Tech
+</div>
 
 </div>
 
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
