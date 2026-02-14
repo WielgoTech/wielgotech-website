@@ -1,139 +1,186 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wielgo Tech | Digital Implant & Full-Arch Lab</title>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wielgo Tech | Digital Implant & Full-Arch Laboratory</title>
 
-    <style>
-      body { 
-        margin:0; 
-        font-family: Arial, Helvetica, sans-serif; 
-        background:#dfe4df; 
-        color:#2c2c2c; 
-      }
+<style>
+body {
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:#dfe4df;
+  color:#2c2c2c;
+}
 
-      .wrap { 
-        max-width: 980px; 
-        margin: 0 auto; 
-        padding: 60px 24px; 
-      }
+.container {
+  max-width:1100px;
+  margin:0 auto;
+  padding:60px 24px;
+}
 
-      .badge { 
-        display:inline-block; 
-        background:#d4cfc6; 
-        padding:8px 14px; 
-        border-radius:999px; 
-        font-size:14px; 
-        color:#4a4a4a; 
-      }
+.header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:60px;
+}
 
-      h1 { 
-        font-size: 42px; 
-        margin: 20px 0 12px; 
-        letter-spacing: 1px;
-      }
+.brand {
+  font-size:22px;
+  letter-spacing:2px;
+  font-weight:600;
+}
 
-      p { 
-        font-size: 18px; 
-        line-height: 1.6; 
-        max-width: 760px; 
-      }
+.nav a {
+  margin-left:20px;
+  text-decoration:none;
+  color:#7a6f60;
+  font-weight:500;
+}
 
-      .grid { 
-        display:grid; 
-        grid-template-columns: 1fr; 
-        gap:18px; 
-        margin-top: 32px; 
-      }
+.hero h1 {
+  font-size:48px;
+  max-width:800px;
+  line-height:1.1;
+  margin-bottom:20px;
+}
 
-      .card { 
-        background:#f4efe8; 
-        padding:22px; 
-        border-radius:14px; 
-        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      }
+.hero p {
+  font-size:20px;
+  max-width:700px;
+  line-height:1.6;
+  color:#5c5449;
+}
 
-      .card h3 { 
-        margin:0 0 10px; 
-      }
+.cta {
+  margin-top:30px;
+}
 
-      .cta { 
-        margin-top: 30px; 
-        display:flex; 
-        gap:14px; 
-        flex-wrap:wrap; 
-      }
+.button {
+  padding:14px 22px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:600;
+  margin-right:14px;
+  display:inline-block;
+}
 
-      a.btn { 
-        text-decoration:none; 
-        padding:12px 18px; 
-        border-radius:12px; 
-        border:1px solid #7a6f60; 
-        color:#7a6f60; 
-      }
+.primary {
+  background:#7a6f60;
+  color:white;
+}
 
-      a.btn.primary { 
-        background:#7a6f60; 
-        color:white; 
-        border-color:#7a6f60; 
-      }
+.secondary {
+  border:1px solid #7a6f60;
+  color:#7a6f60;
+}
 
-      footer { 
-        margin-top: 50px; 
-        font-size:14px; 
-        color:#6b6257; 
-      }
-    </style>
-  </head>
+.section {
+  margin-top:100px;
+}
 
-  <body>
-    <div class="wrap">
-      <span class="badge">
-        Parsippany, New Jersey • Nationwide Digital Case Intake
-      </span>
+.section h2 {
+  font-size:30px;
+  margin-bottom:20px;
+}
 
-      <h1>Wielgo Tech</h1>
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
+}
 
-      <p>
-        A fully digital dental laboratory focused on implant restorations and full-arch reconstructions.
-        Built for predictable delivery, smooth chairtime, and clear communication.
-      </p>
+.card {
+  background:#f4efe8;
+  padding:24px;
+  border-radius:14px;
+}
 
-      <div class="grid">
-        <div class="card">
-          <h3>Primary Focus</h3>
-          <p>Digital implant restorations + full-mouth / full-arch reconstructions.</p>
-        </div>
+.card h3 {
+  margin-top:0;
+}
 
-        <div class="card">
-          <h3>Supporting Services</h3>
-          <p>Crown & bridge designed for accuracy, contacts, and occlusion you can trust.</p>
-        </div>
+.footer {
+  margin-top:120px;
+  font-size:14px;
+  color:#6b6257;
+  border-top:1px solid rgba(0,0,0,0.08);
+  padding-top:30px;
+}
+</style>
+</head>
 
-        <div class="card">
-          <h3>All In-House</h3>
-          <p>Design + production handled in-house (no outsourcing) for consistency and control.</p>
-        </div>
-      </div>
+<body>
 
-      <div class="cta">
-       <a class="btn primary" href="./send-case.html">
-  Send a Case
-</a>
+<div class="container">
 
-        <a class="btn" href="mailto:info@wielgotech.com?subject=Inquiry%20-%20Wielgo%20Tech">
-          Contact
-        </a>
-      </div>
+<div class="header">
+  <div class="brand">WIELGO TECH</div>
+  <div class="nav">
+    <a href="./send-case.html">Send a Case</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
 
-      <footer>
-        © <span id="year"></span> Wielgo Tech — Digital Implant & Full-Arch Laboratory
-      </footer>
+<div class="hero">
+  <h1>Implant restorations engineered for predictable, stress-free delivery.</h1>
+  <p>
+    A fully digital dental laboratory specializing in implant restorations and full-arch reconstructions.
+    Designed in-house. Milled in-house. No outsourcing. No guesswork.
+  </p>
+
+  <div class="cta">
+    <a class="button primary" href="./send-case.html">Submit a Case</a>
+    <a class="button secondary" href="#">Contact Wielgo Tech</a>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Core Focus</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Digital Implant Restorations</h3>
+      <p>Single units, multi-unit bridges, custom abutments and Ti-base restorations designed for accurate seating and minimal chairside adjustment.</p>
     </div>
+    <div class="card">
+      <h3>Full-Arch Reconstructions</h3>
+      <p>Fully digital workflow for full mouth implant cases with restorative planning in mind from the beginning.</p>
+    </div>
+    <div class="card">
+      <h3>Crown & Bridge</h3>
+      <p>High-precision zirconia and aesthetic restorations with reliable contacts and occlusion.</p>
+    </div>
+  </div>
+</div>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </body>
+<div class="section">
+  <h2>Why Wielgo Tech</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Fully Digital Workflow</h3>
+      <p>Exocad and 3Shape proficiency with compatibility across major scanner platforms.</p>
+    </div>
+    <div class="card">
+      <h3>All Production In-House</h3>
+      <p>Four milling units and full control over every case. No outsourcing. No unknown variables.</p>
+    </div>
+    <div class="card">
+      <h3>Restorative-Driven Planning</h3>
+      <p>Implant design decisions made with final outcome, occlusion, and chairtime efficiency in mind.</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  © <span id="year"></span> Wielgo Tech — Parsippany, New Jersey
+</div>
+
+</div>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
 </html>
