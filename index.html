@@ -144,6 +144,34 @@ body {
   color:#3d4a52;
 }
 
+/* Implant Systems Section */
+.platforms {
+  margin-top:60px;
+  text-align:center;
+}
+
+.platforms h2 {
+  font-size:32px;
+  font-weight:900;
+  margin-bottom:40px;
+}
+
+.platform-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:25px;
+}
+
+.platform-item {
+  font-size:20px;
+  font-weight:800;
+  letter-spacing:1px;
+  padding:20px;
+  border-radius:8px;
+  background:var(--card);
+  border:1px solid var(--border);
+}
+
 .footer {
   margin-top:140px;
   font-size:14px;
@@ -165,7 +193,7 @@ body {
     <a href="#focus">Focus</a>
     <a href="#workflow">Workflow</a>
     <a href="#equipment">Equipment</a>
-    <a href="#why">Why</a>
+    <a href="#platforms">Platforms</a>
     <a href="./send-case.html">Send a Case</a>
     <a href="#contact">Contact</a>
   </div>
@@ -180,46 +208,6 @@ body {
   <div class="cta">
     <a class="button primary" href="./send-case.html">Submit a Case</a>
     <a class="button secondary" href="#contact">Contact Wielgo Tech</a>
-  </div>
-</div>
-
-<div class="section" id="focus">
-  <h2>Core Focus</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Digital Implant Restorations</h3>
-      <p>Single-unit and multi-unit implant solutions designed for accurate seating and reduced occlusal adjustment.</p>
-    </div>
-    <div class="card">
-      <h3>Full-Arch Reconstructions</h3>
-      <p>Comprehensive digital planning for full-mouth implant cases with restorative-driven workflow.</p>
-    </div>
-    <div class="card">
-      <h3>Crown & Bridge</h3>
-      <p>High-strength zirconia and aesthetic restorations fabricated with precision and consistency.</p>
-    </div>
-  </div>
-</div>
-
-<div class="section" id="workflow">
-  <h2>Digital Implant Workflow</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>1. Prescription & Case Review</h3>
-      <p>Structured review of RX and STL files including implant position, restorative space, screw channel trajectory, and aesthetic limitations before design begins.</p>
-    </div>
-    <div class="card">
-      <h3>2. Restorative-Driven Digital Design</h3>
-      <p>Designed within exocad to prescription. When conflicts arise, direct communication is initiated prior to fabrication to confirm the appropriate restorative path.</p>
-    </div>
-    <div class="card">
-      <h3>3. In-House Milling & Fabrication</h3>
-      <p>Custom abutments, implant restorations, and frameworks milled in-house across dedicated production units.</p>
-    </div>
-    <div class="card">
-      <h3>4. Finishing & Quality Control</h3>
-      <p>Final fit verification and occlusal evaluation prior to release—engineered to minimize chairside adjustment.</p>
-    </div>
   </div>
 </div>
 
@@ -245,22 +233,19 @@ body {
   </div>
 </div>
 
-<div class="section" id="why">
-  <h2>Why Wielgo Tech</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Restorative-Driven Decisions</h3>
-      <p>Implant design choices made with final outcome and long-term restorative success in mind.</p>
-    </div>
-    <div class="card">
-      <h3>Direct Technician Access</h3>
-      <p>Communicate directly with the technician handling your case—no layers, no miscommunication.</p>
-    </div>
-    <div class="card">
-      <h3>Predictable Outcomes</h3>
-      <p>Controlled systems built around reducing remakes and improving chairtime efficiency.</p>
-    </div>
+<div class="section platforms" id="platforms">
+  <h2>Supported Implant Platforms</h2>
+  <div class="platform-grid">
+    <div class="platform-item">Straumann</div>
+    <div class="platform-item">Zimmer</div>
+    <div class="platform-item">Nobel Biocare</div>
+    <div class="platform-item">Hiossen</div>
+    <div class="platform-item">Neoss</div>
+    <div class="platform-item">Neodent</div>
   </div>
+  <p style="margin-top:30px; color:var(--muted);">
+    Additional implant systems supported upon request.
+  </p>
 </div>
 
 <div class="section" id="contact">
